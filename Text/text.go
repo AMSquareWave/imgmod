@@ -11,5 +11,5 @@ func RGBText(redText, greenText, blueText string) {
 }
 
 func ColourText(colourCode int, text string) {
-	fmt.Println(fmt.Sprintf("\033[%dm", colourCode) + text + "\033[0m")
+	fmt.Println("\033[" + fmt.Sprintf("%d", colourCode) + "m" + text + "\033[0m")
 }
