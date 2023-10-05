@@ -2,7 +2,6 @@ package Text
 
 import (
 	"fmt"
-	"strconv"
 )
 
 func RGBText(redText, greenText, blueText string) {
@@ -12,5 +11,5 @@ func RGBText(redText, greenText, blueText string) {
 }
 
 func ColourText(colourCode int, text string) {
-	fmt.Print("\033[" + strconv.Itoa(colourCode) + "m" + text + "\033[0m")
+	fmt.Print(fmt.Sprintf("\033[%dm", colourCode) + text + "\033[0m")
 }
